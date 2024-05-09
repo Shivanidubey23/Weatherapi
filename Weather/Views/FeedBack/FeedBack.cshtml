@@ -1,0 +1,47 @@
+﻿@*  /*******************************************************************************
+ Name:         Feedback view
+ Author:       Shivani Dubey, Chrome Infotech
+ Date:         02/14/2023
+ Description:  Weather
+ Copyright © 2023 ChromeInfotech Corporation.  All Rights Reserved
+ Revisions:
+ 02/14/2023  1.0.0   SD  Created
+*******************************************************************************  *@
+@{
+    ViewData[Constant.Keys.Title] = Constant.Text.Feedback;
+    Layout = Constant.Layout.layout;
+}
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+<link rel="stylesheet" href="~/css/feedback.css">
+<div class="card-overlay">
+    <div class="card">
+        <h1 class="text-center">@Constant.Text.FeedbackForm</h1>
+        <form method="post" action="/Feedback/SubmitFeedback" onsubmit="return validateForm()">
+            <div class="text-center">
+                <label for="rating">@Constant.Text.RateUs</label><br />
+                <div class="rating">
+                    <input type="radio" id="star5" name="Rating" value="5" /><label for="star5"><i class="far fa-star"></i></label>
+                    <input type="radio" id="star4" name="Rating" value="4" /><label for="star4"><i class="far fa-star"></i></label>
+                    <input type="radio" id="star3" name="Rating" value="3" /><label for="star3"><i class="far fa-star"></i></label>
+                    <input type="radio" id="star2" name="Rating" value="2" /><label for="star2"><i class="far fa-star"></i></label>
+                    <input type="radio" id="star1" name="Rating" value="1" /><label for="star1"><i class="far fa-star"></i></label>
+                </div>
+            </div>
+            <br />
+            <div class="text-center">
+                <label for="comment">@Constant.Messages.Comment</label><br />
+                <div class="comment-textarea">
+                    <textarea id="comment" name="Comment" rows="4" cols="50"></textarea>
+                </div>
+            </div>
+            <br />
+            <div class="text-center">
+                <button type="submit" class="btn btn-primary">@Constant.Text.Submit</button>
+            </div>
+        </form>
+    </div>
+</div>
+<script src="~/js/feedback.js"></script>
+
+

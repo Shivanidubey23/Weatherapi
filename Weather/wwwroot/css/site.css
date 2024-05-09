@@ -1,0 +1,214 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap");
+body {
+    margin: 0;
+    padding: 0;
+    background-image: url('../bgimage.png');
+    background-size: cover;
+    font-family: 'Poppins', sans-serif;
+    color: white;
+}
+#container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Align items at the top */
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    /*background-color: rgb(0, 0, 0, 0.73);*/ /* Transparent background */
+    /*background-image: url(../bgimage.png);*/
+    background-size: auto;
+    font-family: "Poppins", sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    height: 100vh;
+}
+
+::placeholder {
+    color: #fff;
+}
+
+input {
+    background-color: #575757;
+    border: none;
+    border-radius: 25px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    font-family: inherit;
+    font-size: 1rem;
+    padding: 1rem;
+    min-width: 300px;
+    color: #fff;
+    transition: 0.2s;
+}
+
+    input#search:hover {
+        background: #65747b;
+    }
+
+    input:focus {
+        outline: none;
+        align-items: center;
+        margin-bottom: 0;
+        padding-left: 85px;
+    }
+
+.weather {
+    font-size: 2rem;
+    text-align: center;
+}
+
+    .weather h2 {
+        display: flex;
+        align-items: center;
+        margin-bottom: 0;
+        padding-left: 90px;
+    }
+
+.more-info p {
+    font-size: 20px;
+}
+
+.more-info span {
+    font-weight: 600;
+}
+  
+
+
+.heading-wrapper {
+    display: flex;
+    align-items: center;
+}
+
+.heading {
+    margin-top: 20px; /* Add space at the top */
+    margin-right: 10px; /* Add margin between heading and setting button */
+    color: white; /* Set heading color */
+}
+
+.card-row{
+    display: flex;
+    justify-content: center; /* Center cards horizontally */
+    gap: 10px; /* Add some space between cards */
+    margin-top: 20px; /* Add margin between heading and card row */
+}
+
+.card {
+    background: rgb(182, 43, 43, 0.4);
+    padding: 2em;
+    border-radius: 30px;
+    height:200px;
+    width: 500px; /* Adjust card width as needed */
+    max-width: 80%; /* Maximum width */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#weatherCard {
+    height: 300px;
+    width: 300px; /* AQI card takes full width */
+    max-width: 400px;
+}
+#aqiCard {
+    height: 300px;
+    width: 300px; /* AQI card takes full width */
+    max-width: 400px; /* Limit AQI card width */
+}
+
+/*.search {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+}*/
+
+.search-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+/*
+input.searchbar {
+    border: none;
+    outline: none;
+    padding: 0.4em 1em;
+    border-radius: 24px;
+    background: #7c7c7c2b;
+    color: whitesmoke;
+    font-family: inherit;
+    font-size: 105%;
+    width: calc(100% - 100px);
+}*/
+
+/*.icon-button {
+    background-color: transparent;
+    border: 2px solid transparent;*/ /* Transparent border */
+    /*padding: 10px 15px;*/ /* Padding for the buttons */
+    /*cursor: pointer;
+    transition: background-color 0.2s ease-in-out, border-color 0.2s ease-in-out;*/ /* Transition for background and border color */
+/*}
+
+    .icon-button:hover {
+        background-color: rgba(255, 255, 255, 0.3);*/ /* Semi-transparent background color on hover */
+        /*border-color: rgba(255, 255, 255, 0.3);*/ /* Semi-transparent border color on hover */
+    /*}*/
+
+.card button {
+    margin: 10px; /* Adjust margin for the buttons */
+}
+.chartjs-chart .chartjs-y-axis .chartjs-y-axis-title {
+    color: white; /* Set color of Y-axis title */
+}
+/* Update search and searchbar alignment */
+.search {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+input.searchbar {
+    border: none;
+    outline: none;
+    padding: 0.4em 1em;
+    border-radius: 24px;
+    background: #7c7c7c2b;
+    color: whitesmoke;
+    font-family: inherit;
+    font-size: 105%;
+    width: calc(100% - 20px); /* Adjust width to make space for button */
+}
+
+.icon-button {
+    background-color: transparent;
+    border: 2px solid transparent; /* Transparent border */
+    padding: 10px 15px; /* Padding for the buttons */
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out, border-color 0.2s ease-in-out; /* Transition for background and border color */
+    margin-left: 10px; /* Adjust margin to separate from input */
+}
+
+    .icon-button:hover {
+        background-color: rgba(255, 255, 255, 0.3); /* Semi-transparent background color on hover */
+        border-color: rgba(255, 255, 255, 0.3); /* Semi-transparent border color on hover */
+    }
+
+/* Align feedback button at the corner of the footer */
+.btn-feedback {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: transparent;
+    color: #fff;
+    border: 1px solid #fff;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+    .btn-feedback:hover {
+        background-color: #ffc107;
+        color: #000;
+    }

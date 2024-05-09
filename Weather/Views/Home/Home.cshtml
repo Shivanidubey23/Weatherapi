@@ -1,0 +1,53 @@
+﻿@*  /*******************************************************************************
+ Name:         Home view
+ Author:       Shivani Dubey, Chrome Infotech
+ Date:         02/13/2023
+ Description:  Weather
+ Copyright © 2023 ChromeInfotech Corporation.  All Rights Reserved
+ Revisions:
+ 02/13/2023  1.0.0   SD  Created
+*******************************************************************************  *@
+@{
+    ViewData[Constant.Keys.Title] = Constant.Text.Home;
+    Layout = Constant.Layout.layout;
+}
+<link rel="stylesheet" href="~/css/site.css">
+<div class="container" id="container">
+    <div class="heading-wrapper">
+        <h1 class="heading">@Constant.Text.WeatherForecast</h1>
+    </div>
+    <div class="container" id="container">
+        <div class="card-row">
+            <div class="card">
+                <div class="search">
+                    <input type="text" id="locationInput" class="searchbar" placeholder="Enter location">
+                    <button id="searchButton" class="icon-button">@Constant.Text.Search</button>
+                </div>
+                <div class="search-item">
+                    <button id="currentLocationButton" class="icon-button">@Constant.Text.CurrentLocation</button>
+                </div>
+            </div>
+            <div class="card" id="weatherCard">
+                <h2>@Constant.Text.CurrentWeather</h2>
+            </div> <!-- Weather card -->
+            <div class="card" id="aqiCard">
+                <h2>@Constant.Text.AQI</h2>
+                <div id="aqiDetails"></div>
+                <div id="aqiWidget"></div>
+            </div> <!-- AQI card -->
+        </div>
+    </div>
+    <div class="card" id="forecastCard">
+        <h2>@Constant.Text.dayforecast</h2>
+        <div class="forecast-slider">
+            <div id="forecastChartContainer" class="forecast-slide">
+              @*   <canvas id="myChart" style="width:100%;max-width:700px"></canvas> *@
+                <!-- Chart will be dynamically added here -->
+            </div>
+            <!-- Additional forecast slides will be added dynamically -->
+        </div>
+    </div>
+    <a href="/Feedback/Feedback" class="btn-feedback">@Constant.Text.Feedback</a>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="~/js/site.js"></script>
